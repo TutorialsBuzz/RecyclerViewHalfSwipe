@@ -1,0 +1,2 @@
+# RecyclerViewHalfSwipe
+RecyclerViewHalfSwipe
