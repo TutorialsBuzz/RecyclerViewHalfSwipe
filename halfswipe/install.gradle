@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.tutorialsbuzz.halfswipe' // CREATE A GROUP ID FOR YOUR LIBRARY
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.tutorialsbuzz.halfswipe' // CREATE A GROUP ID FOR YOUR LIBRARY
+                artifactId 'halfswipe' // THE NAME OF YOUR MODULE
+
+                name 'halfswipe' // YOUR LIBRARY NAME
+                description 'A collections of methods to work with Date objects.' // YOUR LIBRARY DESCRIPTION
+                url 'https://github.com/TutorialsBuzz/RecyclerViewHalfSwipe' // YOUR SITE
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'tutorialsbuzz' //YOUR ID
+                        name 'pawan deshpande' //YOUR NAME
+                        email 'pavan7210@gmail.com' //YOUR EMAIL
+                    }
+                }
+                scm {
+                    connection 'https://github.com/TutorialsBuzz/RecyclerViewHalfSwipe' // YOUR GIT REPO
+                    developerConnection 'https://github.com/TutorialsBuzz/RecyclerViewHalfSwipe.git' // YOUR GIT REPO
+                    url 'https://github.com/TutorialsBuzz/RecyclerViewHalfSwipe' // YOUR SITE
+
+                }
+            }
+        }
+    }
+}

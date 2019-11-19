@@ -1,4 +1,33 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = 'maven' //Repository name in Bintray dashboard
+    bintrayName = 'com.tutorialsbuzz.halfswipe' // The package name in Bintray dsahboard
+    libraryName = 'halfswipe' //module name
+
+    //Artifact
+    // Ex: com.tutorialsbuzz.halfswipe:halfswipe
+    publishedGroupId = 'com.tutorialsbuzz.halfswipe'
+    // ID Which you want to incclude in implemantion
+    artifact = 'halfswipe'
+    libraryVersion = '1.0.0'
+
+    libraryDescription = 'This view is a container that supports diagonal scroll and fling gesture. It is based on AOSP HorizontalScrollView.'
+
+    siteUrl = 'https://github.com/TutorialsBuzz/RecyclerViewHalfSwipe'
+    gitUrl = 'https://github.com/TutorialsBuzz/RecyclerViewHalfSwipe.git'
+
+
+    developerId = 'hdpavan'
+    developerName = 'Pawan Deshpande'
+    developerEmail = 'pavan7210@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 29
@@ -33,4 +62,19 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
+}
+
+repositories {
+    mavenCentral()
+}
+
+//Add these lines to publish library to bintray. This is the readymade scripts made by github user nuuneoi to make uploading to bintray easy.
+//Place it at the end of the file
+if (project.rootProject.file('local.properties').exists()) {
+    //Add these lines to publish library to bintray. This is the readymade scripts made by github user nuuneoi to make uploading to bintray easy.
+//Place it at the end of the file
+//    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/install.gradle'
+    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/bintray.gradle'
 }
