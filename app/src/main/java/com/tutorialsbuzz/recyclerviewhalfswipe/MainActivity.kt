@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                         this@MainActivity,
                         R.drawable.ic_archive_black_24dp
                     ),
-                    Color.parseColor("#000000"),
+                    Color.parseColor("#000000"), Color.parseColor("#ffffff"),
                     UnderlayButtonClickListener { pos: Int ->
 
                         Toast.makeText(
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                         this@MainActivity,
                         R.drawable.ic_flag_black_24dp
                     ),
-                    Color.parseColor("#FF0000"),
+                    Color.parseColor("#FF0000"), Color.parseColor("#ffffff"),
                     UnderlayButtonClickListener { pos: Int ->
 
                         Toast.makeText(
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                         this@MainActivity,
                         R.drawable.ic_more_horiz_black_24dp
                     ),
-                    Color.parseColor("#00FF00"),
+                    Color.parseColor("#00FF00"), Color.parseColor("#ffffff"),
                     UnderlayButtonClickListener { pos: Int ->
 
                         Toast.makeText(

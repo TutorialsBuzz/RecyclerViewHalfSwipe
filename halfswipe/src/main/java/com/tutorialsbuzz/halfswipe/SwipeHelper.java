@@ -207,15 +207,17 @@ public abstract class SwipeHelper extends ItemTouchHelper.SimpleCallback {
     public static class UnderlayButton {
         private String text;
         private Drawable imageResId;
-        private int color;
+        private int buttonBackgroundcolor;
+        private int textColor;
         private int pos;
         private RectF clickRegion;
         private UnderlayButtonClickListener clickListener;
 
-        public UnderlayButton(String text, Drawable imageResId, int color, UnderlayButtonClickListener clickListener) {
+        public UnderlayButton(String text, Drawable imageResId, int buttonBackgroundcolor, int textColor, UnderlayButtonClickListener clickListener) {
             this.text = text;
             this.imageResId = imageResId;
-            this.color = color;
+            this.buttonBackgroundcolor = buttonBackgroundcolor;
+            this.textColor = textColor;
             this.clickListener = clickListener;
         }
 
@@ -230,16 +232,15 @@ public abstract class SwipeHelper extends ItemTouchHelper.SimpleCallback {
 
         private void onDraw(Canvas canvas, RectF rect, int pos) {
 
-            boolean flag = true;
-
             Paint p = new Paint();
             // Draw background
-            p.setColor(color);
+            p.setColor(buttonBackgroundcolor);
             canvas.drawRect(rect, p);
 
             if (!animate) {
                 // Draw Text
-                p.setColor(Color.WHITE);
+//                p.setColor(Color.BLACK);
+                p.setColor(textColor);
                 p.setTextSize(40);
                 Rect r = new Rect();
                 float cHeight = rect.height();
@@ -254,14 +255,12 @@ public abstract class SwipeHelper extends ItemTouchHelper.SimpleCallback {
 
                 imageResId.draw(canvas);
 
-
-                clickRegion = rect;
-                this.pos = pos;
             } else {
+                //animate
                 // Draw Text
                 TextPaint textPaint = new TextPaint();
                 textPaint.setTextSize(40);
-                textPaint.setColor(Color.WHITE);
+                textPaint.setColor(textColor);
                 StaticLayout sl = new StaticLayout(text, textPaint, (int) rect.width(),
                         Layout.Alignment.ALIGN_CENTER, 1, 1, false);
 
@@ -274,10 +273,10 @@ public abstract class SwipeHelper extends ItemTouchHelper.SimpleCallback {
                 canvas.translate(rect.left, rect.top + y - 40);
                 sl.draw(canvas);
                 canvas.restore();
-
-                clickRegion = rect;
-                this.pos = pos;
             }
+
+            clickRegion = rect;
+            this.pos = pos;
         }
 
 //        fun drawIconOnCanVas(

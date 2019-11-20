@@ -2,6 +2,7 @@ package com.tutorialsbuzz.recyclerviewhalfswipe;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,7 +37,7 @@ public class MainActivity1 extends AppCompatActivity {
         CustomAdapter customAdapter = new CustomAdapter(modelList, this);
         recyclerview.setAdapter(customAdapter);
 
-        new SwipeHelper(this, recyclerview, false) {
+        new SwipeHelper(this, recyclerview, true) {
 
             @Override
             public void instantiateUnderlayButton(RecyclerView.ViewHolder viewHolder,
@@ -47,9 +48,11 @@ public class MainActivity1 extends AppCompatActivity {
                                 MainActivity1.this,
                                 R.drawable.ic_archive_black_24dp
                         ),
-                        Color.parseColor("#000000"), new UnderlayButtonClickListener() {
+                        Color.parseColor("#000000"), Color.parseColor("#ffffff"), new UnderlayButtonClickListener() {
                     @Override
                     public void onClick(int pos) {
+
+                        Toast.makeText(MainActivity1.this, "Archive", Toast.LENGTH_SHORT).show();
 
                     }
                 }));
@@ -60,9 +63,10 @@ public class MainActivity1 extends AppCompatActivity {
                                 MainActivity1.this,
                                 R.drawable.ic_flag_black_24dp
                         ),
-                        Color.parseColor("#FF0000"), new UnderlayButtonClickListener() {
+                        Color.parseColor("#FF0000"), Color.parseColor("#ffffff"), new UnderlayButtonClickListener() {
                     @Override
                     public void onClick(int pos) {
+                        Toast.makeText(MainActivity1.this, "Flag", Toast.LENGTH_SHORT).show();
 
                     }
                 }));
@@ -73,9 +77,10 @@ public class MainActivity1 extends AppCompatActivity {
                                 MainActivity1.this,
                                 R.drawable.ic_more_horiz_black_24dp
                         ),
-                        Color.parseColor("#00FF00"), new UnderlayButtonClickListener() {
+                        Color.parseColor("#00FF00"), Color.parseColor("#ffffff"), new UnderlayButtonClickListener() {
                     @Override
                     public void onClick(int pos) {
+                        Toast.makeText(MainActivity1.this, "More", Toast.LENGTH_SHORT).show();
 
                     }
                 }));
