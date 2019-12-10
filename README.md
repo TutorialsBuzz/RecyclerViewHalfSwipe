@@ -65,3 +65,4 @@ new SwipeHelper(this, recyclerview, false) {
 
 Screenshot
 ![](https://raw.githubusercontent.com/TutorialsBuzz/RecyclerViewHalfSwipe/master/android_recyclerView_button_under_swipe.png)
+
