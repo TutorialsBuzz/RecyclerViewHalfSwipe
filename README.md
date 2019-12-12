@@ -62,9 +62,10 @@ new SwipeHelper(this, recyclerview, false) {
    }
 </pre>
 
-<h1>Video</h1>
-[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=3B5M4puUxTk)](https://www.youtube.com/watch?v=3B5M4puUxTk)
-
+<h1>Video
+<br/>
+https://www.youtube.com/watch?v=3B5M4puUxTk	
+</h1>
 <br/>
 
 <h1>Screenshot</h1>
