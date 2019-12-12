@@ -64,7 +64,7 @@ new SwipeHelper(this, recyclerview, false) {
 
 <h1>Video
 <br/>
-<a href="">	
+<a href="https://www.youtube.com/watch?v=3B5M4puUxTk" target="_blank">	
 https://www.youtube.com/watch?v=3B5M4puUxTk	
 </a>	
 </h1>
