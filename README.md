@@ -72,6 +72,7 @@ https://www.youtube.com/watch?v=3B5M4puUxTk
 
 <h1>Screenshot</h1>
 
+<div style="width:400px">
 ![RecyclerViewSwipe](https://raw.githubusercontent.com/TutorialsBuzz/RecyclerViewHalfSwipe/master/android_recyclerView_button_under_swipe.png)
-
+</div>
 
