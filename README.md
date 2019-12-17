@@ -1,6 +1,9 @@
 # RecyclerView Button Under Swipe
 RecyclerView Button Under Swipe 
 
+ [ ![Download](https://api.bintray.com/packages/hdpavan44/Halfswipe/com.tutorialsbuzz.halfswipe/images/download.svg) ](https://bintray.com/hdpavan44/Halfswipe/com.tutorialsbuzz.halfswipe/_latestVersion)
+
+
 <h1>Install</h1>
 <pre>
 dependencies {
